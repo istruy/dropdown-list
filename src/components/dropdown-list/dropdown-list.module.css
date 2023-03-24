@@ -49,7 +49,7 @@
     border: 1px solid #C1C1C1;
     border-radius: 10px;
     width: 100%;
-    min-width: 14rem;
+    min-width: 40px;
     justify-content: space-between;
     margin-bottom: 8px;
 }
@@ -62,8 +62,11 @@
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 auto;
-    padding: 10px 5px 10px 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     gap: 4px;
+    padding-left: 10px;
+    align-items: center;
 }
 
 .buttonContainer {
