@@ -1,0 +1,25 @@
+.search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 358px;
+    margin: 16px 16px 0 16px;
+    padding: 10px 0px 10px 16px;
+    background: #F4F4F4;
+    border-radius: 10px;
+}
+
+.inputSearch {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    color: #C1C1C1;
+}
+
+.inputSearch:focus {
+    display: inline;
+    outline: 0;
+    color: #333333;
+}

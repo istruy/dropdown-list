@@ -1,0 +1,24 @@
+.selectContainer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    font-weight: 500;
+    background: #F4F4F4;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.selectLabel {
+    max-width: 100%;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 500;
+    flex: 0 1 auto;
+    color: #333333;
+}
+
+.selectClose {
+    cursor: pointer;
+}

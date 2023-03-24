@@ -1,0 +1,30 @@
+.languageDescription {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.languageItem {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 20px 0 0px 16px;
+    margin-right: 16px;
+}
+
+.languageCheckbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #C1C1C1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.languageCheckbox:checked {
+    cursor: pointer;
+    border-radius: 10px;
+    color: #86878a;
+    border: 2px solid #0049D9;
+    background: url(../../data/img/check.svg) no-repeat;
+}

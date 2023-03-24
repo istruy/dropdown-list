@@ -3,6 +3,7 @@ import { Language } from "../../types/language";
 import SelectLabel from "../item-label/item-label";
 import ItemLanguage from "../item-language/item-language";
 import Search from "../search/search";
+import styles from './dropdown-list.module.css';
 
 type DropdownListProps = {
     languages: Language[];
@@ -31,16 +32,16 @@ function DropdownList({ languages }: DropdownListProps): JSX.Element {
     }
 
     return (
-        <div className="dropdown">
-            <div className="dropdown-header">Язык</div>
-            <div className="select">
-                <div className="select-wrapper">
-                    <div className="select-item">
-                        <div className="item">
+        <div className={styles.dropdown}>
+            <div className={styles.dropdownHeader}>Язык</div>
+            <div className={styles.select}>
+                <div className={styles.selectWrapper}>
+                    <div className={styles.selectItem}>
+                        <div className={styles.item}>
                             {allLanguages.filter((item) => item.checked).map((item) => <SelectLabel key={item.id} onClick={() => deleteLanguageLabel(item)} languageName={item.name} />)}
                         </div>
-                        <div className="button-container">
-                            <button className={` ${hide ? 'open-button' : ''} `} onClick={() => setHide(!hide)} >
+                        <div className={styles.buttonContainer}>
+                            <button className={` ${hide ? styles.openButton : ''} `} onClick={() => setHide(!hide)} >
                                 <svg
                                     width="10"
                                     height="6"
@@ -54,9 +55,9 @@ function DropdownList({ languages }: DropdownListProps): JSX.Element {
                         </div>
                     </div>
                 </div>
-                <div className={`languages ${hide ? 'hidden' : ''} `}>
+                <div className={hide ? styles.hidden : styles.languages}>
                     <Search onInput={getLanguageByInput} />
-                    <ul className="language-list">
+                    <ul className={styles.languageList}>
                         {allLanguages.filter((item) => searchableLanguages.includes(item.name)).map((item) => <ItemLanguage onClick={() => pushOrDeleteItemFromLanguages(item)} key={item.id} language={item} />)}
                     </ul>
                 </div>
